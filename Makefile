@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -c -Wall --std=c++17
 LFLAGS = -Wall
-OBJS = main.o oscillator.o
+OBJS = main.o sine_oscillator.o
 
 all : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main
@@ -9,8 +9,8 @@ all : $(OBJS)
 main.o : main.cpp
 	$(CC) $(CFLAGS) main.cpp 
 
-oscillator.o : oscillator.h oscillator.cpp 
-	$(CC) $(CFLAGS) oscillator.cpp 
+sine_oscillator.o : sine_oscillator.h sine_oscillator.cpp 
+	$(CC) $(CFLAGS) sine_oscillator.cpp 
 
 run :
 	./main 
